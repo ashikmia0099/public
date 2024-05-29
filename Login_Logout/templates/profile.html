@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block blockname %}
+
+
+<style>
+    .editinfo{
+
+        text-decoration: none;
+
+    }
+</style>
+  
+
+
+<div class="container-fluid"> 
+  <div class="row flex-nowrap">
+      <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+          <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+              <a href="{% url 'student_info' %}" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                  <h1 class=" d-none d-sm-inline mt-5 deshboard_id border-bottom pb-5">My Profile</h1>
+              </a>
+              <ul class="nav nav-pills text-white flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                  
+                <li>
+                    <a href="#submenu1" data-bs-toggle="collapse"  class="nav-link px-0 align-middle">
+                        <a href="{% url 'student_dataUpdate' %}" class="editinfo"> <span class="ms-1 d-none d-sm-inline text-white">
+                        <h4 class=" d-none d-sm-inline deshboard_id">Edit Information</h4></span></a>
+                    </a>
+                </li>
+                  
+                <li>
+                    <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                    <a href="{% url 'refferal_link' %}" class="editinfo"> <span class="ms-1 d-none d-sm-inline text-white">
+                    <h4 class=" d-none d-sm-inline deshboard_id">Refferal Link</h4></a></a>
+                </li>
+                <li>
+                    <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                    <a href="{% url 'certificate' %}" class="editinfo"> <span class="ms-1 d-none d-sm-inline text-white">
+                    <h4 class=" d-none d-sm-inline deshboard_id">Certification</h4></a></a>
+                </li>
+              </ul> 
+              <hr> 
+              
+          </div>
+      </div>
+      <div class="col py-3">
+          {% block Deshboard %}
+ 
+          {% endblock Deshboard %}
+      </div>
+  </div>
+</div>
+
+      
+{% endblock blockname %}
+
+ 
+
+
+
+
